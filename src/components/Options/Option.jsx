@@ -1,7 +1,9 @@
+import css from "./Option.module.css";
 function Options({ total, updateFeedback, resetFeedback }) {
   return (
-    <div>
+    <div className={css["options-box"]}>
       <button
+        className={css.btn}
         type="button"
         onClick={() => {
           updateFeedback("good");
@@ -10,6 +12,7 @@ function Options({ total, updateFeedback, resetFeedback }) {
         good
       </button>
       <button
+        className={css.btn}
         type="button"
         onClick={() => {
           updateFeedback("neutral");
@@ -18,6 +21,7 @@ function Options({ total, updateFeedback, resetFeedback }) {
         neutral
       </button>
       <button
+        className={css.btn}
         type="button"
         onClick={() => {
           updateFeedback("bad");
@@ -27,6 +31,7 @@ function Options({ total, updateFeedback, resetFeedback }) {
       </button>
       {total !== 0 && (
         <button
+          className={css.btn}
           type="button"
           onClick={resetFeedback}
           //   onClick={() =>

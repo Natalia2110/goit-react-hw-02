@@ -4,6 +4,7 @@ import Description from "./components/Description/Description";
 import Options from "./components/Options/Option";
 import Feedback from "./components/Feedback/Feedback";
 import Notification from "./components/Notification/Notification";
+import css from "./App.module.css";
 
 export default function App() {
   //   let clicks = 0;
@@ -52,7 +53,7 @@ export default function App() {
   };
 
   return (
-    <>
+    <div className={css["container"]}>
       <Description title="Sip Happens Café" />
       <Options
         total={totalFeedback}
@@ -71,6 +72,6 @@ export default function App() {
       ) : (
         <Notification />
       )}
-    </>
+    </div>
   );
 }
